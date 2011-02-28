@@ -8,7 +8,7 @@
 	<%= link_to "Collection: " + collection.name.humanize, collection %>
 	<% end %>
 </h3>
-<div class="carousel_container" style="height:240px; padding-bottom: 20px;">
+<div class="carousel_container">
 	<div class="infiniteCarousel">
 	  <div class="wrapper">
 	    <ul>
@@ -32,40 +32,3 @@
 <% if @project.collections.blank? %>
 	<div class='grid_15'>There are no videos in the<br /> queue for this project yet.</li>
 <% end %>
-
-<style>
-.infiniteCarousel {
-  width: 940px;
-  position: relative;
-}
-
-.infiniteCarousel .wrapper {
-  width: 800px; /* .infiniteCarousel width - (.wrapper margin-left + .wrapper margin-right) */
-  overflow: auto;
-  min-height: 250px;
-  margin: 0 70px;
-  position: absolute;
-  top: 0;
-  background-color: #555;
-}
-
-.infiniteCarousel .wrapper ul {
-  width: 9999px;
-  list-style-image:none;
-  list-style-position:outside;
-  list-style-type:none;
-  margin:0;
-  padding:0;
-  position: absolute;
-  top: 0;
-}
-
-.infiniteCarousel ul li {
-  display:block;
-  float:left;
-  padding: 5px; /* smaller padding between items */
-  height: 250px;
-  width: 160px;
-}
-
-</style>

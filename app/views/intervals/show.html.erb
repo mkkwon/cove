@@ -38,20 +38,6 @@
 
 	<div class="grid_16 space">
 		
-<ul class="dropdown">
-	<li>Add to</li>
-	<li><a href="#">+Favorites</a></li>
-	<li><a href="#">+Queue</a></li>
-	<li><a href="#">Collections</a>
-		<ul class="vdrop">
-			<li><a class="add" href="#">+New Collection</a></li>
-			<li><a href="#">Collection alpha</a></li>
-			<li><a href="#">Collection beta</a></li>
-			<li><a href="#">Collection gamma</a></li>
-			<li><a href="#">Collection omega</a></li>
-		</ul>
-	</li>
-</ul>
 		
 	</div>
 	<div class="clear"></div>
@@ -65,6 +51,24 @@
 	<div class="clear"></div>
 
 
+	<div class="grid_16 space">
+		
+<ul class="dropdown">
+	<li><a href="#">+Favorites</a></li>
+	<li><a href="#">+Queue</a></li>
+	<li><a href="#">+Collections</a>
+		<ul>
+			<li><a href="#">Add to New Collection</a></li>
+			<li><a href="#">Collection alpha</a></li>
+			<li><a href="#">Collection beta</a></li>
+			<li><a href="#">Collection gamma</a></li>
+			<li><a href="#">Collection omega</a></li>
+		</ul>
+	</li>
+</ul>
+		
+	</div>
+	<div class="clear"></div>
 	<div class="grid_16 time">
 		<div class="time">
 			<h4><%= @interval.start_time.strftime("%T") %> ------------------------------------------------------------------------------------------</h4>
@@ -74,6 +78,7 @@
 	
 
 	<div class="grid_16 space">
+		
 	</div>
 	<div class="clear"></div>
 	

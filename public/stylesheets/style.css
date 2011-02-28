@@ -825,37 +825,33 @@ div#video div p {
 
 	ul.dropdown{
 		position: absolute;
-		width: 200px;
 		margin: 0;
         padding: .3em;
+		list-style: none;
 	}
 
 	ul.dropdown li{
-		float: none;
-		list-style: none;
-        padding: .5em;
+        float: left;
+        margin-right: 5px;
         
         /* Decorative CSS */
-border-top:#f0f0f0 1px solid;
-    font-family: Arial, Helvetica, sans-serif;
     text-decoration:none;
     text-transform:uppercase;
     color: #000;
     background: #cccccc;
  		font-size: .95em;
     	font-weight: bold;
-        
-    
 	}
 	
 	ul.dropdown li a{
         display: block;
-    	background-color: #ffd700;
+    	background-color: gray;
         font-size: .95em;
     	font-weight: bold;
-        border: 1px solid #b88080;
+        border: 1px solid #000;
         padding: .5em;
         text-decoration: none;
+    color: #000;
 	}
 		
 	ul.dropdown li a:hover{
@@ -863,33 +859,31 @@ border-top:#f0f0f0 1px solid;
         color: #fff;
 	}
 	
-	ul.dropdown li ul.vdrop{
+	ul.dropdown li ul{
 		display: none;
 		position: inherit;
-        padding: 0;
+        padding: .3em;
+        list-style: none;
+        width: 65px;
 	}
 	
-	ul.dropdown li ul.vdrop li a{
-		background-color: #e6c000;
+	ul.dropdown li ul li a{
+    	background-color: gray;
+	    color: #333;
+	    border: 0;
 	}
 	
-	ul.dropdown li ul.vdrop li a:hover{
+	ul.dropdown li ul li a:hover{
         background-color: #333;
+                color: #fff;
 	}
 	
-	ul.dropdown li ul.vdrop li a.add{
-        background-color: #ffd700;
+	ul.dropdown li:hover ul{
+		float: left;
+		display: inline-block;
 	}
 	
-	ul.dropdown li ul.vdrop li a.add:hover{
-        background-color: #333;
-        color: #fff;        
-	}
-	
-	ul.dropdown li:hover ul.vdrop{
-		display: block;
-	}	
-	
+
 
 /* end style adjustments for dropdown add */
 /***********************************/
@@ -1044,6 +1038,16 @@ div.project_container .right-arw {border-color:transparent transparent transpare
 .nobr	{white-space: nowrap;}
 
 
+/* Project List page properties */
+/*div.projectlist_thumb {
+	background-color: #383838;
+
+}
+
+div.projectlist_detail {
+  	background-color: #555;
+
+}*/
 
 /* favorites properties in "Projects" Page */
 
@@ -1064,9 +1068,10 @@ div.project_container .right-arw {border-color:transparent transparent transpare
 	border-width:20px;
 	width:0;
 	height:0;
-	margin-top: 75px;
+	margin-top: 100px;
 	float: right;
 	cursor: pointer;
+	background: #383838;
 }
 
 .arrow_backward {
@@ -1075,8 +1080,49 @@ div.project_container .right-arw {border-color:transparent transparent transpare
 	border-width:20px;
 	width:0;
 	height:0;
-	margin-top: 75px;
+	margin-top: 100px;
 	float: left;
-
 	cursor: pointer;
+	background: #383838;
+}
+
+div.carousel_container {
+	height:230px; 
+	padding-bottom: 20px;
+	background-color: #383838;
+}
+
+.infiniteCarousel {
+  width: 940px;
+  position: relative;
+}
+
+
+.infiniteCarousel .wrapper {
+  width: 800px; /* .infiniteCarousel width - (.wrapper margin-left + .wrapper margin-right) */
+  overflow: auto;
+  min-height: 250px;
+  margin: 0 70px;
+  position: absolute;
+  top: 0;
+  background-color: #555;
+}
+
+.infiniteCarousel .wrapper ul {
+  width: 9999px;
+  list-style-image:none;
+  list-style-position:outside;
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  position: absolute;
+  top: 0;
+}
+
+.infiniteCarousel ul li {
+  display:block;
+  float:left;
+  padding: 5px; /* smaller padding between items */
+  height: 250px;
+  width: 160px;
 }
