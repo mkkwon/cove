@@ -1,10 +1,5 @@
-
-<style>
-
-</style>
-
 <div class="container_16 list_project">
-<% if @project %>
+<% if @projects %>
 <div class="grid_11">
    &nbsp; 
 </div>
@@ -23,42 +18,34 @@
 </div>
 <div class="clear"></div>
 
-<% @project.each do | project | %>
+<% @projects.each do | project | %>
    <% if project.user_id == current_user.id %>
 
 <div class="grid_3">
    &nbsp; 
 </div>
-<div class="grid_3 projectlist_thumb">
-	
-   &nbsp; <br />
-   <div style="height:90px; width: 160px; background-color: gray; text-align: center;">160x90px</div>
+	<div class="project_row">
+	<div class="grid_3 project_row_div" > <!--> Give this the interval row treatment <-->
+    	<h2 style="padding:0px; padding-top:4px;"><%= link_to project.name, project %></h2>
 
-   <!-- This will show the first thumbnail of their favorites interval -->
-</div>
-	<div class="grid_7 projectlist_detail">
-      <h2><%= link_to project.name, project %></h2> 
-      <p>Owner: <em><strong><%= current_user.email %></strong></em></p>
-      <p><%= project.desc %></p>
-      <p>Tags: <em>Tags would go here</em></p>
-      
-   &nbsp; <br />
 	</div>
-<div class="grid_3">
-   &nbsp; 
-</div>
-<div class="clear"></div>
-
-
+	<div class="grid_3 project_row_div">
+		<div style="padding: 12px 0px;">Owner: <strong><%= current_user.email %></strong></div>
+	</div>
+	<div class="grid_10 project_row_div">
+		<div style="padding: 12px 0px;">Description: <%= project.desc[0, project.desc.length > 60 ? 60 : project.desc.length] %><%= "..." if project.desc.length > 60 %></div>
+	</div>
+	</div>
+	<div class="clear"></div>
 	<% end %>
 <% end %>
 
 <% else %>
 
-<div class="grid_16">
-<p>Please log in to access projects.</p>
-</div>
-<div class="clear"></div>
+<h2>You have no projects.</h2>
+<div class="project_form_header">Please create a new project.</div>
+
+<%= render :partial => 'form' %>
 
 <% end %>
 </div>

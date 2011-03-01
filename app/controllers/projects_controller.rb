@@ -3,7 +3,10 @@ class ProjectsController < ApplicationController
   before_filter :require_nda
 
   def index
-    @project = Project.all
+    @projects = Project.all
+    if @projects.nil?
+      @project = Project.new
+    end
     render "index"
   end
 
@@ -21,6 +24,15 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(params[:project])
+    ['favorites','queue'].each do |type|
+      @collection = Collection.new
+      @collection.name = "project_" + @project.id + "_" + type
+      @collection.description = type.humanize + " for " + 'project'.humanize
+      @collection.user_id = current_user.id
+      @collection.projects += [@project]
+      @collection.save
+    end
+      
     if @project.save
       redirect_to(@project, :notice => 'Project was successfully created.')
     else
