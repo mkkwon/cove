@@ -1128,7 +1128,7 @@ div.project_container .right-arw {border-color:transparent transparent transpare
 
 .note_list_container a.expand_all {
 	cursor: pointer; 
-	float:right;
+	float: right;
 }
 
 .note_form textarea.text { 
@@ -1149,18 +1149,6 @@ div.project_container .right-arw {border-color:transparent transparent transpare
 	margin: 5px; padding: 2px; background-color: #777; color: #111;
 }
 
-<<<<<<< HEAD
-/* Project List page properties */
-/*div.projectlist_thumb {
-	background-color: #383838;
-
-}
-
-div.projectlist_detail {
-  	background-color: #555;
-
-}*/
-=======
 .note_slide {
 	 display:inline; margin-left: -4px;
 }
@@ -1217,13 +1205,6 @@ div.carousel_container {
 	background-color: #383838;
 }
 
-.infiniteCarousel {
-  width: 940px;
-  position: relative;
-}
-
-<<<<<<< HEAD
-=======
 .project_form_header {
 	padding-bottom: 12px;
 }
@@ -1238,6 +1219,7 @@ div.carousel_container {
 	color: #444;
 	background-color: #E5E5E5;
 }
+
 
 .project_row {
 	padding: 20px 0px;
@@ -1263,18 +1245,10 @@ div.carousel_container {
   width: 940px;
   position: relative;
 }
->>>>>>> 350fbf94c377c34c9c4dfc8ab3f999f627e2ecb2
 
 .infiniteCarousel .wrapper {
   width: 800px; /* .infiniteCarousel width - (.wrapper margin-left + .wrapper margin-right) */
   overflow: auto;
-<<<<<<< HEAD
-  min-height: 250px;
-  margin: 0 70px;
-  position: absolute;
-  top: 0;
-  background-color: #555;
-=======
   min-height: 225px;
   margin: 0 70px;
   position: absolute;
@@ -1283,7 +1257,6 @@ div.carousel_container {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
->>>>>>> 350fbf94c377c34c9c4dfc8ab3f999f627e2ecb2
 }
 
 .infiniteCarousel .wrapper ul {
@@ -1300,16 +1273,9 @@ div.carousel_container {
 .infiniteCarousel ul li {
   display:block;
   float:left;
-<<<<<<< HEAD
-  padding: 5px; /* smaller padding between items */
-  height: 250px;
-  width: 160px;
-}
-=======
   padding: 0px 20px; /* smaller padding between items */
   padding-top: 5px;
   height: 200px;
   width: 160px;
   color: black;
 }
->>>>>>> 350fbf94c377c34c9c4dfc8ab3f999f627e2ecb2
