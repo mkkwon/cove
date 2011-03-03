@@ -1035,89 +1035,92 @@ a.destroy_collection {
 
 
 /***********************************/
-/* Style sheet for dropdown add widget */
-
-	ul.dropdown{
-		position: absolute;
-		width: 200px;
+/* Style sheet for addto widget in show.intervals page */
+div.addto_div {
+	float:right;
+	padding-bottom:5px;
+}
+ul.addto_widget {
+		position: relative;
 		margin: 0;
-        padding: .3em;
 	}
 
-	ul.dropdown li{
-		float: none;
-		list-style: none;
-        padding: .5em;
+ul.addto_widget li{
+        float: left;
+        margin-right: 5px;
+        position: relative;
         
-        /* Decorative CSS */
-border-top:#f0f0f0 1px solid;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration:none;
-    text-transform:uppercase;
-    color: #000;
-    background: #cccccc;
+     	/* Decorative CSS */
+    	text-transform:uppercase;
+    	color: #000;
  		font-size: .95em;
     	font-weight: bold;
-        
-    
-	}
+    	list-style-type:none;
+		}
 	
-	ul.dropdown li a{
+ul.addto_widget li a{
+        
+     	/* Decorative CSS */
+		border-top:#f0f0f0 1px solid;
+    	background-color: #cccccc;
+    	/*rounded corners*/
+	
         display: block;
-    	background-color: #ffd700;
         font-size: .95em;
     	font-weight: bold;
-        border: 1px solid #b88080;
         padding: .5em;
         text-decoration: none;
+        /*rounded corners*/
+        -moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px; /* future proofing */
+-khtml-border-radius: 5px; /* for old Konqueror browsers */
 	}
 		
-	ul.dropdown li a:hover{
+	ul.addto_widget li a:hover{
         background-color: #333;
         color: #fff;
 	}
 	
-	ul.dropdown li ul.vdrop{
+ul.addto_widget li#collectbutton {
+		cursor: default;
+     	/* Decorative CSS */
+     	color: #0297C1;
+		border-top:#f0f0f0 1px solid;
+    	background-color: #cccccc;
+    	/*rounded corners*/
+	
+        display: block;
+        font-size: .95em;
+    	font-weight: bold;
+        padding: .5em;
+        text-decoration: none;
+	}
+	
+	ul.addto_widget li > ul.vdrop{
 		display: none;
-		position: inherit;
-        padding: 0;
+		position: absolute;
+		top: 0px;
+		left: 71px;
 	}
 	
-	ul.dropdown li ul.vdrop li a{
-		background-color: #e6c000;
+	ul.addto_widget li ul.vdrop li a{
+		background-color: #dedede;
+		width: 150px;
 	}
 	
-	ul.dropdown li ul.vdrop li a:hover{
+	ul.addto_widget li ul.vdrop li a:hover{
         background-color: #333;
 	}
 	
-	ul.dropdown li ul.vdrop li a.add{
-        background-color: #ffd700;
-	}
-	
-	ul.dropdown li ul.vdrop li a.add:hover{
-        background-color: #333;
-        color: #fff;        
-	}
-	
-	ul.dropdown li:hover ul.vdrop{
+	ul.addto_widget li:hover > ul.vdrop{
 		display: block;
 	}	
 	
 
-/* end style adjustments for dropdown add */
+/* end style adjustments for add */
 /***********************************/
 
-
-/***********************************/
-/* Style sheet for project pages */
-
-.project_fav{
-	
-}
-
-/* end style adjustments for dropdown add */
-/***********************************/
 
 
 /*
