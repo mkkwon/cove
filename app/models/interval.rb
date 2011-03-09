@@ -18,6 +18,7 @@ class Interval < ActiveRecord::Base
   has_and_belongs_to_many :collections
   
   has_many :codings
+  has_many :codes, :through => :codings
   has_many :taggings
   has_many :tags, :through => :taggings
 
@@ -67,10 +68,6 @@ class Interval < ActiveRecord::Base
 
 	def day
 		start_time.strftime("%m-%d-%y") if start_time
-	end
-
-	def start_time_of_day
-		start_time.strftime("%l:%M %p") if start_time
 	end
 	
 	def self.unique_days
